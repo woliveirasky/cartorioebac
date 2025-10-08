@@ -186,7 +186,7 @@ int main()
 			break;
 			
 			case 4:
-			printf("Obrigado por utilizar o sistema!\n");
+			printf("\n Obrigado por utilizar o sistema!\n");
 			return 0;
 			break;	
 			
