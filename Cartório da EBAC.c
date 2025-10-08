@@ -185,7 +185,7 @@ int main()
 			deletar();
 			break;
 			
-			case 4: //chamando a função deletar cpf
+			case 4: //chamando a função sair do sistema
 			printf("\n Obrigado por utilizar o sistema!\n");
 			return 0;
 			break;	
