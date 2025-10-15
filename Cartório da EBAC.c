@@ -150,29 +150,43 @@ int main()
 {
 	int opcao=0; // definindo variaveis
 	int laco=1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	
-	for(laco=1;laco=10;)
-    {
+	printf("\t### Cartório da EBAC ###\n\n");
+	printf("login de administrador!\n\ndigitea sua senha: ");
+	scanf("%s",senhadigitada);
 	
-	    system("cls"); //
+	comparacao = strcmp(senhadigitada, "admin");
 	
-	    setlocale(LC_ALL, "portuguese"); //definindo a linguagem
+	if(comparacao == 0) // ou usar (strcmp(senhadigitada, "admin") == 0) que funciona também
+   {
 	
-	    printf("\t### Cartório da EBAC ###\n\n"); // inicio do menu
-	    printf("\tEscolha a opção desejada do menu:\n\n");
-	    printf("\t1 - Registar  Nomes\n");
-	    printf("\t2 - Consultar Nomes\n");
-	    printf("\t3 - Deletar   Nomes\n\n");
-	    printf("\t4 - Sair do sistema\n\n");
-	    printf("escolha a opção:"); //fim do menu
+	   system("cls"); // comando usado para limpar a tela do console, 
+	      //ele envia o comando cls (clear screen) para o prompt de comando do Windows, que limpa a tela do console.
+	   for(laco=1;laco=10;)
+      {
 	
-        scanf("%d", &opcao); //armazenando a escolha do usuario
+	     system("cls"); //comando usado para limpar a tela do console, 
+	      //ele envia o comando cls (clear screen) para o prompt de comando do Windows, que limpa a tela do console.
+	
+	     setlocale(LC_ALL, "portuguese"); //definindo a linguagem
+	
+	     printf("\t### Cartório da EBAC ###\n\n"); // inicio do menu
+	     printf("\tEscolha a opção desejada do menu:\n\n");
+	     printf("\t1 - Registar  Nomes\n");
+	     printf("\t2 - Consultar Nomes\n");
+	     printf("\t3 - Deletar   Nomes\n\n");
+	     printf("\t4 - Sair do sistema\n\n");
+	     printf("escolha a opção:"); //fim do menu
+	
+         scanf("%d", &opcao); //armazenando a escolha do usuario
     
-        system("cls"); // comando usado para limpar a tela do console, 
-	     //ele envia o comando cls (clear screen) para o prompt de comando do Windows, que limpa a tela do console.
+         system("cls"); // comando usado para limpar a tela do console, 
+	      //ele envia o comando cls (clear screen) para o prompt de comando do Windows, que limpa a tela do console.
     
-        switch(opcao) // inicio da seleção
-		{
+         switch(opcao) // inicio da seleção
+		 {
 			case 1: //chamando a função registar cpf
 			registro();
 			break;	
@@ -195,9 +209,15 @@ int main()
 			system("pause");
 			break;	
 				
-		}    
+		 }    
     
     
-   }	
+     }	
+   }
+     else
+          printf("\nsenha incorreta!\n\n");
 }
+
+
+    
 
